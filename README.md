@@ -1,1 +1,1 @@
-# simple-js-app
+# pokedex-app
