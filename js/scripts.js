@@ -4,38 +4,38 @@
 let pokemonList = [];
 
 // Add Pokémon objects to the array
-pokemonList[0] = {
+pokemonList.push({
   name: "Bulbasaur",
   height: 7,
   type: ["grass", "poison"]
-};
+});
 
-pokemonList[1] = {
+pokemonList.push({
   name: "Ivysaur",
   height: 10,
   type: ["grass", "poison"]
-};
+});
 
-pokemonList[2] = {
+pokemonList.push({
   name: "Venusaur",
   height: 20,
   type: ["grass", "poison"]
-};
+});
 
-pokemonList[3] = {
+pokemonList.push({
   name: "Charmander",
   height: 6,
   type: ["fire"]
-};
+});
 
-pokemonList[4] = {
+pokemonList.push({
   name: "Charmeleon",
   height: 11,
   type: ["fire"]
-};
+});
 
-pokemonList[5] = {
+pokemonList.push({
   name: "Charizard",
   height: 17,
   type: ["fire"]
-};
+});
