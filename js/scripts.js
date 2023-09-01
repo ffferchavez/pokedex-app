@@ -6,36 +6,51 @@ let pokemonList = [];
 // Add Pokémon objects to the array
 pokemonList.push({
   name: "Bulbasaur",
-  height: 7,
+  height: 0.7,
   type: ["grass", "poison"]
 });
 
 pokemonList.push({
   name: "Ivysaur",
-  height: 10,
+  height: 1.0,
   type: ["grass", "poison"]
 });
 
 pokemonList.push({
   name: "Venusaur",
-  height: 20,
+  height: 2.0,
   type: ["grass", "poison"]
 });
 
 pokemonList.push({
   name: "Charmander",
-  height: 6,
+  height: 0.6,
   type: ["fire"]
 });
 
 pokemonList.push({
   name: "Charmeleon",
-  height: 11,
+  height: 1.1,
   type: ["fire"]
 });
 
 pokemonList.push({
   name: "Charizard",
-  height: 17,
+  height: 1.7,
   type: ["fire"]
 });
+
+for (let i = 0; i < pokemonList.length; i++) {
+  let pokemon = pokemonList[i];
+  document.write(pokemon.name + " (height: " + pokemon.height + ") - ");
+
+  if (pokemon.size > 1.5) {
+    document.write("Wow, that is big!");
+  } else if (pokemon.size > 0.5 && pokemon.size < 1.5) {
+    document.write("This is a normal size pokemon");
+  } else {
+    document.write("This is a small pokemon");
+  }
+
+  document.write("<br>");
+}
