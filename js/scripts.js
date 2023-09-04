@@ -44,9 +44,9 @@ for (let i = 0; i < pokemonList.length; i++) {
   let pokemon = pokemonList[i];
   document.write(pokemon.name + " (height: " + pokemon.height + ") - ");
 
-  if (pokemon.size > 1.5) {
+  if (pokemon.height > 1.5) {
     document.write("Wow, that is big!");
-  } else if (pokemon.size > 0.5 && pokemon.size < 1.5) {
+  } else if (pokemon.height > 0.5 && pokemon.size < 1.5) {
     document.write("This is a normal size pokemon");
   } else {
     document.write("This is a small pokemon");
