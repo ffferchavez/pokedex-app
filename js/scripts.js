@@ -52,4 +52,4 @@ pokemonList.forEach(pokemon => {
   }
 
   document.write("<br>");
-}
+});
