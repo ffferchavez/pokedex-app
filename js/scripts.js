@@ -1,7 +1,8 @@
 // Create a new variable called pokemonList and assign to it a blank array.
 // This array contains Pokémon data to display in your application.
 
-let pokemonList = [];
+let pokemonRepository = (function () {
+  let pokemonList = [];
 
 // Add Pokémon objects to the array
 pokemonList.push({
@@ -40,7 +41,17 @@ pokemonList.push({
   type: ["fire"]
 });
 
-pokemonList.forEach(pokemon => {
+return {
+  add: function(pokemon) {
+    pokemonList.push(pokemon);
+  },
+  getAll: function() {
+    return pokemonList;
+  }
+};
+})();
+
+pokemonRepository.getAll().forEach(pokemon => {
   document.write(pokemon.name + " (height: " + pokemon.height + ") - ");
 
   if (pokemon.height > 1.5) {
