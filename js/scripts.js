@@ -43,10 +43,18 @@ pokemonList.push({
 
 return {
   add: function(pokemon) {
+    if (typeof pokemon === 'object' && Object.keys(pokemon).lenght === 3 
+&& 'name' in pokemon && 'height' in pokemon && 'type' in pokemon) {
     pokemonList.push(pokemon);
-  },
+  } else {
+    console.error('Invalid Pokemon object. Please provide an object with properties: name, height, and type.');
+      }
+    },
   getAll: function() {
     return pokemonList;
+  },
+  findByName: function(name) {
+    return pokemonList.filter(pokemon => pokemon.name.toLowerCase() === name.toLowerCase());
   }
 };
 })();
