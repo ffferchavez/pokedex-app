@@ -40,8 +40,7 @@ pokemonList.push({
   type: ["fire"]
 });
 
-for (let i = 0; i < pokemonList.length; i++) {
-  let pokemon = pokemonList[i];
+pokemonList.forEach(pokemon => {
   document.write(pokemon.name + " (height: " + pokemon.height + ") - ");
 
   if (pokemon.height > 1.5) {
