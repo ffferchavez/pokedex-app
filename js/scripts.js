@@ -41,18 +41,22 @@ pokemonList.push({
   type: ["fire"]
 });
 
-return {
-  add: function(pokemon) {
-    if (typeof pokemon === 'object' && Object.keys(pokemon).lenght === 3 
-&& 'name' in pokemon && 'height' in pokemon && 'type' in pokemon) {
+function add(pokemon) {
+  if (typeof pokemon === 'object' && Object.keys(pokemon).length === 3 &&
+      'name' in pokemon && 'height' in pokemon && 'type' in pokemon) {
     pokemonList.push(pokemon);
   } else {
     console.error('Invalid Pokemon object. Please provide an object with properties: name, height, and type.');
-      }
-    },
-  getAll: function() {
-    return pokemonList;
-  },
+  }
+}
+
+function getAll() {
+  return pokemonList;
+}
+
+return {
+  add,
+  getAll,
   findByName: function(name) {
     return pokemonList.filter(pokemon => pokemon.name.toLowerCase() === name.toLowerCase());
   }
