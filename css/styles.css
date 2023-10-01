@@ -1,8 +1,35 @@
 body {
-    background-color: #ccc;
+    background-color: lightgray;
+    background-image: url("/img/pokedex-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 h1 {
-    font-weight: 700;
-    color: #00f;
+    text-align: center;
+    font-size: 62px;
+    font-weight: 900;
+    color: rgb(92, 91, 91);
+}
+
+.pokemon-button {
+    background-color: rgb(53, 162, 122);
+    color: #161697;
+    border-radius: 5%;
+    border: 3px solid white;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: solid;
+    display: inline-block;
+    font-size: 28px;
+    margin: 5px 3px;
+    cursor: pointer;
+}
+
+.pokemon-button:hover {
+    background-color: rgb(92, 91, 91);
+    color: blanchedalmond;
+    border: 3px solid blanchedalmond;
+    transition: 1.8s;
+    
 }
