@@ -28,9 +28,12 @@ let pokemonRepository = (function () {
   function addListItem(pokemon) {
     let pokemonList = document.querySelector('.pokemon-list');
     let listpokemon = document.createElement('li');
+    listpokemon.classList.add('list-group-item');
     let button = document.createElement('button');
     button.innerText = pokemon.name;
-    button.classList.add('pokemon-button');
+    button.classList.add('pokemon-button', 'btn', 'btn-primary');
+    button.setAttribute('data-toggle', 'modal');
+    button.setAttribute('data-target', '#pokemonModal');
     listpokemon.appendChild(button);
     pokemonList.appendChild(listpokemon);
     button.addEventListener('click', function (event) {
@@ -103,30 +106,56 @@ let pokemonRepository = (function () {
 
   function showModal(pokemon) {
     modalContainer.innerHTML = '';
-
+  
     let modal = document.createElement('div');
-    modal.classList.add('modal');
-
+    modal.classList.add('modal', 'fade');
+    modal.setAttribute('id','pokemonModal');
+    modal.setAttribute('tabindex', '-1');
+    modal.setAttribute('role', 'dialog');
+    modal.setAttribute('aria-labelledby', 'pokemonModalLabel');
+    modal.setAttribute('aria-hidden', 'true');
+  
+    let modalDialog = document.createElement('div');
+    modalDialog.classList.add('modal-dialog');
+    modal.appendChild(modalDialog);
+  
+    let modalContent = document.createElement('div');
+    modalContent.classList.add('modal-content');
+    modalDialog.appendChild(modalContent);
+  
+    let modalHeader = document.createElement('div');
+    modalHeader.classList.add('modal-header');
+    modalContent.appendChild(modalHeader);
+  
+    let modalTitle = document.createElement('h5');
+    modalTitle.classList.add('modal-title');
+    modalTitle.id = 'pokemonModalLabel';
+    modalTitle.innerText = pokemon.name;
+    modalHeader.appendChild(modalTitle);
+  
     let closeButton = document.createElement('button');
-    closeButton.classList.add('modal-close');
-    closeButton.innerText = 'Close';
+    closeButton.classList.add('close');
+    closeButton.setAttribute('type', 'button');
+    closeButton.setAttribute('data-dismiss', 'modal');
+    closeButton.setAttribute('aria-label', 'Close');
+    closeButton.innerHTML = '<span aria-hidden="true">&times;</span>';
     closeButton.addEventListener('click', hideModal);
-
-    let nameElement = document.createElement('h2');
-    nameElement.innerText = pokemon.name;
-
+    modalHeader.appendChild(closeButton);
+  
+    let modalBody = document.createElement('div');
+    modalBody.classList.add('modal-body');
+    modalContent.appendChild(modalBody);
+  
     let heightElement = document.createElement('p');
     heightElement.innerText = 'Height: ' + pokemon.height;
-
+    modalBody.appendChild(heightElement);
+  
     let imageElement = document.createElement('img');
     imageElement.src = pokemon.imageUrl;
     imageElement.alt = pokemon.name + ' image';
-
-    modal.appendChild(closeButton);
-    modal.appendChild(nameElement);
-    modal.appendChild(heightElement);
-    modal.appendChild(imageElement);
-
+    imageElement.classList.add('img-fluid');
+    modalBody.appendChild(imageElement);
+  
     modalContainer.appendChild(modal);
     modalContainer.classList.add('is-visible');
   }
