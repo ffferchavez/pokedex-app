@@ -5,6 +5,21 @@
   gap: 20px;
 }
 
+.navbar-brand {
+  font-size: 12px;
+}
+
+.nav-link {
+  font-size: 24px;
+}
+
+h1 {
+  font-size: 62px;
+  font-weight: 700;
+  background-color: rgb(135, 134, 134);
+  padding: 60px;
+}
+
 .dropdown-menu {
     background-color:#333;
 }
@@ -29,15 +44,24 @@
 
 .modal-title {
   color: #333;
-  font-size: 52px;
+  font-size: 34px;
+  background-color: rgb(135, 134, 134);
+  border-radius: 20px;
+  padding: 15px;
+  border: 3px solid #333;
 }
 
 .modal-body {
   text-align: center;
+  background-color: lightgrey;
+  border: 3px solid #333;
+  margin: auto;
+  border-radius: 10px;
 }
 
 .modal-dialog {
   max-width: 500px;
+  font-size: 20px;
 }
 
 .modal-header {
@@ -45,7 +69,7 @@
 }
 
 .modal-body {
-  padding-bottom: 100px;
+  padding: 70px;
 }
 
 .modal-footer {
