@@ -15,13 +15,16 @@
 }
 
 h1 {
-  background-image: url(/img/Pokemonlogo1.png);
+  background-image: url(/img/pokemonlogo.png);
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   font-size: 84px;
   font-weight: 700;
   background-color: rgb(135, 134, 134);
   padding: 10%;
   font-family: 'Audiowide', sans-serif;
+  color: #333;
 } 
 
 .text-center{
@@ -33,6 +36,20 @@ h1 {
   color: #262626;
   transition: 2s;
   padding: 13%;
+}
+
+@media (max-width: 768px) { /* Small devices */
+  h1, .text-center, .text-center:hover {
+    font-size: 48px;
+    padding: 5%;
+  }
+}
+
+@media (max-width: 992px) { /* Medium devices */
+  h1, .text-center, .text-center:hover {
+    font-size: 64px;
+    padding: 8%;
+  }
 }
 
 #pokeball {
