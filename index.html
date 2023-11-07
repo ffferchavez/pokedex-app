@@ -20,6 +20,9 @@
       href="https://fonts.googleapis.com/css2?family=Geo:ital@1&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Geo:ital@1&display=swap" rel="stylesheet">
     <title>Pokedex App</title>
   </head>
   <body>
@@ -40,11 +43,11 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="/simple-js-app/index.html"
-              >Pokedex <span class="sr-only">(current)</span></a
-            >
+            <a class="nav-link" href="/simple-js-app/index.html">
+              <img src="/img/pokelogo.jpg" alt="pokeball-logo" id="pokeball" width="40" height="40" class="d-inline-block align-text-top">
+              Pokedex <span class="sr-only">(current)</span>
+            </a>
           </li>
-          ^
 
           <li class="nav-item dropdown">
             <a
@@ -144,14 +147,14 @@
             placeholder="Search your Pokemon"
             aria-label="Search"
           />
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+          <button class="btn btn-outline-success my-2 my-sm-0" id="searchbtn" type="submit">
             Search
           </button>
         </form>
       </div>
     </nav>
 
-    <h1 class="text-center">[ Pokedex ]</h1>
+    <h1 class="text-center">Pokedex</h1>
     <div class="list-group pokemon-list"></div>
     <div class="modal-container"></div>
     <script

@@ -3,10 +3,15 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
+  background-color: lightgray;
 }
 
 .navbar-brand {
   font-size: 12px;
+}
+
+.navbar-toggler {
+
 }
 
 .nav-link {
@@ -14,18 +19,44 @@
 }
 
 h1 {
-  font-size: 62px;
+  background-image: url(/img/Pokemonlogo1.png);
+  background-repeat: no-repeat;
+  font-size: 84px;
   font-weight: 700;
   background-color: rgb(135, 134, 134);
-  padding: 60px;
+  padding: 10%;
+  font-family: 'Audiowide', sans-serif;
+} 
+
+.text-center{
+  transition: font-size 0.8s;
+}
+
+.text-center:hover {
+  font-size: 130px;
+  color: #262626;
+  transition: 2s;
+  padding: 13%;
+}
+
+#pokeball {
+  border-radius: 20px;
 }
 
 .dropdown-menu {
-    background-color:#333;
+  background-color: #333;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: #e9ecef;
 }
 
 .list-group-item {
-  background-color: #f8f9fa;
+  background-color: lightgray;
   border: none;
   border-radius: 4px;
   padding: 10px;
@@ -34,29 +65,48 @@ h1 {
 
 .pokemon-button {
   width: 100%;
+  text-transform: capitalize;
+  background-color:#333;
+  border-color: #000;
+}
+
+#searchbtn {
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+#searchbtn:hover {
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: rgb(76, 114, 239);
+}
+
+.pokemon-button:hover {
+  text-transform: capitalize;
+  background-color: rgb(76, 114, 239);
 }
 
 /* CSS for Modal */
 .modal-content {
   background-color: #f8f9fa;
-  border-radius: 20px;
+  border: 1px solid #333;
 }
 
 .modal-title {
   color: #333;
-  font-size: 34px;
-  background-color: rgb(135, 134, 134);
-  border-radius: 20px;
+  text-transform: capitalize;
+  font-size: 38px;
   padding: 15px;
-  border: 3px solid #333;
+  font-style: oblique;
 }
 
 .modal-body {
-  text-align: center;
+  text-align:left;
   background-color: lightgrey;
-  border: 3px solid #333;
-  margin: auto;
-  border-radius: 10px;
+  margin: 0;
+  background-image: url(/img/pokedex-background1.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .modal-dialog {
@@ -69,7 +119,7 @@ h1 {
 }
 
 .modal-body {
-  padding: 70px;
+  padding: 20px;
 }
 
 .modal-footer {
@@ -87,7 +137,10 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
   color: #333;
+  background-color: lightgray;
+  border-radius: 10px;
+  border: 2px solid #333;
 }
