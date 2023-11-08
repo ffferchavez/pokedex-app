@@ -1,0 +1,136 @@
+.modal-title,
+.pokemon-button,
+.pokemon-button:hover {
+  text-transform: capitalize;
+}
+.modal-body,
+h1 {
+  background-repeat: no-repeat;
+}
+#loading-message,
+h1 {
+  font-weight: 700;
+  color: #333;
+}
+.pokemon-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  background-color: #d3d3d3;
+}
+.navbar-brand {
+  font-size: 12px;
+}
+.nav-link {
+  font-size: 24px;
+}
+h1 {
+  background-image: url(/img/pokemonlogo.png);
+  background-position: center;
+  background-size: cover;
+  font-size: 84px;
+  background-color: #878686;
+  padding: 10%;
+  font-family: Audiowide, sans-serif;
+}
+.text-center {
+  transition: font-size 0.8s;
+}
+.text-center:hover {
+  font-size: 130px;
+  color: #262626;
+  transition: 2s;
+  padding: 13%;
+}
+@media (max-width: 768px) {
+  .text-center,
+  .text-center:hover,
+  h1 {
+    font-size: 48px;
+    padding: 5%;
+  }
+}
+@media (max-width: 992px) {
+  .text-center,
+  .text-center:hover,
+  h1 {
+    font-size: 64px;
+    padding: 8%;
+  }
+}
+#pokeball {
+  border-radius: 20px;
+}
+.dropdown-menu {
+  background-color: #333;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+.dropdown-item:focus,
+.dropdown-item:hover {
+  background-color: #e9ecef;
+}
+#searchbtn:hover,
+.pokemon-button:hover {
+  background-color: #4c72ef;
+}
+.list-group-item {
+  background-color: #d3d3d3;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+}
+#searchbtn,
+#searchbtn:hover {
+  color: #fff;
+  border: 1px solid #fff;
+}
+.pokemon-button {
+  width: 100%;
+  background-color: #333;
+  border-color: #000;
+}
+.modal-content {
+  background-color: #f8f9fa;
+  border: 1px solid #333;
+}
+.modal-title {
+  color: #333;
+  font-size: 38px;
+  padding: 15px;
+  font-style: oblique;
+}
+.modal-body {
+  text-align: left;
+  background-color: #d3d3d3;
+  margin: 0;
+  background-image: url(/img/pokedex-background1.jpg);
+  background-size: contain;
+  padding: 20px;
+}
+.modal-dialog {
+  max-width: 500px;
+  font-size: 20px;
+}
+.modal-header {
+  border-bottom: none;
+}
+.modal-footer {
+  border-top: none;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+#loading-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  background-color: #d3d3d3;
+  border-radius: 10px;
+  border: 2px solid #333;
+}
