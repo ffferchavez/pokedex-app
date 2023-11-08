@@ -25,7 +25,7 @@ h1 {
   font-size: 24px;
 }
 h1 {
-  background-image: url(/img/pokemonlogo.png);
+  background-image: url(/img/pokemon-logo.png);
   background-position: center;
   background-size: cover;
   font-size: 84px;
@@ -106,7 +106,7 @@ h1 {
   text-align: left;
   background-color: #d3d3d3;
   margin: 0;
-  background-image: url(/img/pokedex-background1.jpg);
+  background-image: url(/img/modal-background.jpg);
   background-size: contain;
   padding: 20px;
 }
