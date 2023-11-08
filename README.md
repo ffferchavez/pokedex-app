@@ -1,53 +1,46 @@
-# POKEDEX APP
-(JavaScript)
+# Pokedex App
 
-## Project Information
+Welcome to the Pokedex App! This app allows you to explore and learn about various Pokemon species. It provides detailed information about each Pokemon, including their types, abilities, base stats, and more. You can search for specific Pokemon, browse through different generations, and discover new Pokemon!
 
-My first JavaScript app showcases my skills in working with HTML, CSS, and JavaScript. It is a web app that pulls Pokemon data from the PokeAPI. The app allows users to search through the list of Pokemon, and view detailed information about each Pokémon in a modal. 
+## Features
 
-## Libraries and extras used
+- **Search:** Use the search feature to find specific Pokemon by their name or number. Simply enter the search query in the search bar and hit Enter to see the results.
 
-Bootstrap, Prettier.
+- **Generations:** Explore Pokemon from different generations. The app provides information about Pokemon from the 1st to the 9th generation. Click on a generation to see the Pokemon available in that specific generation.
 
-## API
+- **Detailed Information:** Click on a Pokemon to view its detailed information. You can see its name, number, types, abilities, base stats, and a description.
 
-https://pokeapi.co/api/v2/
-The PokeAPI's used to fetch Pokemon data for this project.
+## Getting Started
 
-This code is a JavaScript module for managing a list of Pokémon fetched from the PokeAPI.
+To use the app, follow these steps:
 
-**Initialization**:
-   - The module `pokemonRepository` is defined as an immediately invoked function expression (IIFE) to provide encapsulation.
-   - An empty array `pokemonList` is initialized to store Pokémon.
-   - The `apiUrl` is set to fetch the first 500 Pokémon from the PokeAPI.
+1. Visit the [Pokedex App](https://ffferchavez.github.io/pokedex-app/) in your web browser.
 
-**Adding Pokémon**:
-   - The `add` function allows the addition of Pokémon objects to the `pokemonList` if they're of type "object".
+2. Use the search bar to find a specific Pokemon by entering its name or number. Press Enter to view the search results.
 
-**Search Bar**:
-   - A search bar is created which filters the displayed Pokémon based on the user's search input.
+3. Click on a generation to browse Pokemon from that generation.
 
-**Pokémon List Handling**:
-   - The `getAll` function returns the entire `pokemonList`.
-   - The `removeAllItems` function clears the displayed Pokémon list.
-   - The `addListItem` function creates a list item for a given Pokémon and appends it to the display list.
+4. Click on a Pokemon to view its detailed information, including types, abilities, base stats, and description.
 
-**Fetching Data from the API**:
-   - The `loadList` function fetches the list of Pokémon from the API and adds them to the `pokemonList`.
-   - The `loadDetails` function fetches detailed data for a specific Pokémon from the API.
+That's it! You can now start exploring the world of Pokemon with the Pokedex App.
 
-**Modal Handling**:
-   - The `showDetails` function displays detailed information of a Pokémon in a modal after fetching its details.
-   - The `showModal` function creates the modal with the Pokémon's details like name, image, height, and type.
-   - The `hideModal` function hides the modal.
+## Technologies Used
 
-**Event Listeners**:
-   - An event listener for the "Escape" key is added to close the modal when the key is pressed.
-   - An event listener applied to capture what user types in search bar to be prepare it for the filter function 
-   - Adopting lowerCase method before pokemons are pulled to maintain consistently matched returned pokemon results
+- HTML
+- CSS
+- JavaScript
+- Bootstrap
+- Prettier
+- ESLint
 
-**Module Return**:
-   - Several functions are made publicly accessible by returning them at the end of the IIFE.
+## Contributing
 
-**Execution**:
-   - After defining the module, the Pokémon list is loaded from the API and displayed.
+If you would like to contribute to this project or have suggestions for improvement, please feel free to submit a pull request or open an issue on the [GitHub repository](https://github.com/ffferchavez/pokedex-app). Your feedback is highly appreciated!
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Acknowledgments
+
+- The data and images used in this Pokedex app are sourced from various online resources and APIs.
