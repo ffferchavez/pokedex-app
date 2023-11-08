@@ -1,60 +1,53 @@
-#Pokédex Application (JavaScript)
+# POKEDEX APP
+(JavaScript)
 
--Project overview:
+## Project Information
 
-This JavaScript application demonstrates my proficiency in working with HTML, CSS, and JavaScript. It is a web application that retrieves Pokémon data from the PokeAPI. Users can search through the Pokémon list and access detailed information about each Pokémon in a modal window.
+My first JavaScript app showcases my skills in working with HTML, CSS, and JavaScript. It is a web app that pulls Pokemon data from the PokeAPI. The app allows users to search through the list of Pokemon, and view detailed information about each Pokémon in a modal. 
 
--Utilized libraries:
+## Libraries and extras used
 
-Bootstrap, Jquery
+Bootstrap, Prettier.
 
--API utilized for this project can be found at the following link: https://pokeapi.co/api/v2/
+## API
 
-The PokeAPI is utilized to fetch Pokémon data for this project.
-This code constitutes a JavaScript module responsible for managing a collection of Pokémon retrieved from the PokeAPI.
-Here is a breakdown:
+https://pokeapi.co/api/v2/
+The PokeAPI's used to fetch Pokemon data for this project.
 
-Initialization:
+This code is a JavaScript module for managing a list of Pokémon fetched from the PokeAPI.
 
-The pokemonRepository module is defined as an immediately invoked function expression (IIFE) to ensure encapsulation.
-An empty array called pokemonList is initialized to store Pokémon objects.
-The apiUrl is set to fetch the first 500 Pokémon from the PokeAPI.
+1. **Initialization**:
+   - The module `pokemonRepository` is defined as an immediately invoked function expression (IIFE) to provide encapsulation.
+   - An empty array `pokemonList` is initialized to store Pokémon.
+   - The `apiUrl` is set to fetch the first 500 Pokémon from the PokeAPI.
 
-● Adding Pokémon:
+2. **Adding Pokémon**:
+   - The `add` function allows the addition of Pokémon objects to the `pokemonList` if they're of type "object".
 
-The add function enables the addition of Pokémon objects to the pokemonList, provided they are of type "object".
-Sorting Pokémon:
+3. **Search Bar**:
+   - A search bar is created which filters the displayed Pokémon based on the user's search input.
 
-● Search Bar:
+4. **Pokémon List Handling**:
+   - The `getAll` function returns the entire `pokemonList`.
+   - The `removeAllItems` function clears the displayed Pokémon list.
+   - The `addListItem` function creates a list item for a given Pokémon and appends it to the display list.
 
-A search bar is created to filter the displayed Pokémon based on the user's search input.
+5. **Fetching Data from the API**:
+   - The `loadList` function fetches the list of Pokémon from the API and adds them to the `pokemonList`.
+   - The `loadDetails` function fetches detailed data for a specific Pokémon from the API.
 
-● Pokémon List Management:
+6. **Modal Handling**:
+   - The `showDetails` function displays detailed information of a Pokémon in a modal after fetching its details.
+   - The `showModal` function creates the modal with the Pokémon's details like name, image, height, and type.
+   - The `hideModal` function hides the modal.
 
-The getAll function returns the complete pokemonList.
-The removeAllItems function clears the displayed Pokémon list.
-The addListItem function generates a list item for a given Pokémon and appends it to the display list.
+7. **Event Listeners**:
+   - An event listener for the "Escape" key is added to close the modal when the key is pressed.
+   - An event listener applied to capture what user types in search bar to be prepare it for the filter function 
+   - Adopting lowerCase method before pokemons are pulled to maintain consistently matched returned pokemon results
 
-● Fetching Data from the API:
+8. **Module Return**:
+   - Several functions are made publicly accessible by returning them at the end of the IIFE.
 
-The loadList function retrieves the list of Pokémon from the API, sorts them alphabetically, and adds them to the pokemonList.
-The loadDetails function fetches detailed data for a specific Pokémon from the API.
-
-● Modal Handling:
-
-The showDetails function displays comprehensive information about a Pokémon in a modal window after fetching its details.
-The showModal function creates the modal containing details such as name, image, height, and type, etc. of the Pokémon.
-The hideModal function hides the modal window.
-
-● Event Listeners:
-
-An event listener is added to the "Escape" key to close the modal when the key is pressed.
-An event listener captures user input in the search bar and prepares it for the filtering function.
-The lowercase method is applied before retrieving Pokémon to ensure consistent matching of returned Pokémon results.
-
-● Module Return:
-
-Several functions are made accessible to the public by returning them at the end of the IIFE.
-Execution:
-
-After defining the module, the Pokémon list is loaded from the API and displayed.
+9. **Execution**:
+   - After defining the module, the Pokémon list is loaded from the API and displayed.
