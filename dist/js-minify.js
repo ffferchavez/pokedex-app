@@ -179,7 +179,7 @@ let pokemonRepository = (function () {
       getAll: i,
       addListItem: o,
       loadList: function e() {
-        return fetch("https://pokeapi.co/api/v2/pokemon/?limit=500")
+        return fetch("https://pokeapi.co/api/v2/pokemon/?limit=905")
           .then(function (e) {
             return e.json();
           })
