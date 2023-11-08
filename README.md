@@ -16,38 +16,38 @@ The PokeAPI's used to fetch Pokemon data for this project.
 
 This code is a JavaScript module for managing a list of Pokémon fetched from the PokeAPI.
 
-1. **Initialization**:
+**Initialization**:
    - The module `pokemonRepository` is defined as an immediately invoked function expression (IIFE) to provide encapsulation.
    - An empty array `pokemonList` is initialized to store Pokémon.
    - The `apiUrl` is set to fetch the first 500 Pokémon from the PokeAPI.
 
-2. **Adding Pokémon**:
+**Adding Pokémon**:
    - The `add` function allows the addition of Pokémon objects to the `pokemonList` if they're of type "object".
 
-3. **Search Bar**:
+**Search Bar**:
    - A search bar is created which filters the displayed Pokémon based on the user's search input.
 
-4. **Pokémon List Handling**:
+**Pokémon List Handling**:
    - The `getAll` function returns the entire `pokemonList`.
    - The `removeAllItems` function clears the displayed Pokémon list.
    - The `addListItem` function creates a list item for a given Pokémon and appends it to the display list.
 
-5. **Fetching Data from the API**:
+**Fetching Data from the API**:
    - The `loadList` function fetches the list of Pokémon from the API and adds them to the `pokemonList`.
    - The `loadDetails` function fetches detailed data for a specific Pokémon from the API.
 
-6. **Modal Handling**:
+**Modal Handling**:
    - The `showDetails` function displays detailed information of a Pokémon in a modal after fetching its details.
    - The `showModal` function creates the modal with the Pokémon's details like name, image, height, and type.
    - The `hideModal` function hides the modal.
 
-7. **Event Listeners**:
+**Event Listeners**:
    - An event listener for the "Escape" key is added to close the modal when the key is pressed.
    - An event listener applied to capture what user types in search bar to be prepare it for the filter function 
    - Adopting lowerCase method before pokemons are pulled to maintain consistently matched returned pokemon results
 
-8. **Module Return**:
+**Module Return**:
    - Several functions are made publicly accessible by returning them at the end of the IIFE.
 
-9. **Execution**:
+**Execution**:
    - After defining the module, the Pokémon list is loaded from the API and displayed.
