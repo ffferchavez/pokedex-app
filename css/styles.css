@@ -23,11 +23,11 @@ h1 {
   font-weight: 700;
   background-color: rgb(135, 134, 134);
   padding: 10%;
-  font-family: 'Audiowide', sans-serif;
+  font-family: "Audiowide", sans-serif;
   color: #333;
-} 
+}
 
-.text-center{
+.text-center {
   transition: font-size 0.8s;
 }
 
@@ -38,15 +38,21 @@ h1 {
   padding: 13%;
 }
 
-@media (max-width: 768px) { /* Small devices */
-  h1, .text-center, .text-center:hover {
+@media (max-width: 768px) {
+  /* Small devices */
+  h1,
+  .text-center,
+  .text-center:hover {
     font-size: 48px;
     padding: 5%;
   }
 }
 
-@media (max-width: 992px) { /* Medium devices */
-  h1, .text-center, .text-center:hover {
+@media (max-width: 992px) {
+  /* Medium devices */
+  h1,
+  .text-center,
+  .text-center:hover {
     font-size: 64px;
     padding: 8%;
   }
@@ -79,7 +85,7 @@ h1 {
 .pokemon-button {
   width: 100%;
   text-transform: capitalize;
-  background-color:#333;
+  background-color: #333;
   border-color: #000;
 }
 
@@ -114,7 +120,7 @@ h1 {
 }
 
 .modal-body {
-  text-align:left;
+  text-align: left;
   background-color: lightgrey;
   margin: 0;
   background-image: url(/img/pokedex-background1.jpg);

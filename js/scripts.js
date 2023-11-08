@@ -201,7 +201,7 @@ let pokemonRepository = (function () {
   });
 
   var searchInput = document.querySelector(".form-control");
-  searchInput.addEventListener("input", function() {
+  searchInput.addEventListener("input", function () {
     var searchText = searchInput.value.toLowerCase();
     searchPokemon(searchText);
   });
@@ -213,7 +213,7 @@ let pokemonRepository = (function () {
       var filteredPokemon = pokemonList.filter(function (pokemon) {
         return pokemon.name.toLowerCase().includes(searchText);
       });
-  
+
       // Display the filtered results
       displayPokemonList(filteredPokemon);
     }
@@ -239,24 +239,22 @@ let pokemonRepository = (function () {
   }
 
   var generationItems = document.querySelectorAll(".generation-item");
-generationItems.forEach(function (item) {
-  item.addEventListener("click", function (event) {
-    event.preventDefault(); // Prevent default link behavior
-    var generationId = item.dataset.generationId;
-    filterByGeneration(generationId);
-  });
-});
-
-function filterByGeneration(generationId) {
-  var filteredPokemon = pokemonList.filter(function (pokemon) {
-    return pokemon.generation === generationId;
+  generationItems.forEach(function (item) {
+    item.addEventListener("click", function (event) {
+      event.preventDefault(); // Prevent default link behavior
+      var generationId = item.dataset.generationId;
+      filterByGeneration(generationId);
+    });
   });
 
-  // Display the filtered results
-  displayPokemonList(filteredPokemon);
-}
+  function filterByGeneration(generationId) {
+    var filteredPokemon = pokemonList.filter(function (pokemon) {
+      return pokemon.generation === generationId;
+    });
 
-
+    // Display the filtered results
+    displayPokemonList(filteredPokemon);
+  }
 
   modalContainer.addEventListener("click", function (event) {
     let target = event.target;
