@@ -6,10 +6,6 @@ let pokemonRepository = (function () {
   function add(pokemon) {
     if (typeof pokemon === "object" && "name" in pokemon) {
       pokemonList.push(pokemon);
-    } else {
-      console.log(
-        "Invalid Pokemon object. Please provide an object with properties: name, height, and type."
-      );
     }
   }
 
@@ -32,6 +28,7 @@ let pokemonRepository = (function () {
     button.classList.add("pokemon-button", "btn", "btn-primary");
     button.setAttribute("data-toggle", "modal");
     button.setAttribute("data-target", "#pokemonModal");
+    button.setAttribute("data-types", pokemon.types.join(","));
     listpokemon.appendChild(button);
     pokemonList.appendChild(listpokemon);
     button.addEventListener("click", function (event) {
@@ -70,9 +67,9 @@ let pokemonRepository = (function () {
           let pokemon = {
             name: item.name,
             detailsUrl: item.url,
+            types: [],
           };
           add(pokemon);
-          console.log(pokemon);
         });
       })
       .catch(function (e) {
@@ -192,6 +189,37 @@ let pokemonRepository = (function () {
     }
   });
 
+  function displayPokemonList(filteredPokemon) {
+    clearPokemonList();
+    filteredPokemon.forEach(function (pokemon) {
+      addListItem(pokemon);
+    });
+  }
+
+  function filterByType(type) {
+    let filteredPokemon = pokemonList.filter((pokemon) =>
+      pokemon.types.includes(type)
+    );
+    displayPokemonList(filteredPokemon);
+  }
+
+  function searchPokemon(query) {
+    let filteredPokemon = pokemonList.filter((pokemon) =>
+      pokemon.name.toLowerCase().includes(query.toLowerCase())
+    );
+    displayPokemonList(filteredPokemon);
+  }
+
+  let typeDropdown = document.getElementById("type-dropdown");
+  typeDropdown.addEventListener("change", function (event) {
+    let selectedType = event.target.value;
+    if (selectedType === "all") {
+      displayPokemonList(pokemonList);
+    } else {
+      filterByType(selectedType);
+    }
+  });
+
   var searchForm = document.querySelector(".form-inline");
   searchForm.addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent form submission
@@ -276,10 +304,12 @@ let pokemonRepository = (function () {
   return {
     add: add,
     getAll: getAll,
+    findByName: findByName,
     addListItem: addListItem,
     loadList: loadList,
     loadDetails: loadDetails,
     showDetails: showDetails,
+    searchPokemon: searchPokemon,
   };
 })();
 
