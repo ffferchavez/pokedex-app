@@ -15,7 +15,7 @@
 }
 
 h1 {
-  background-image: url(/img/pokemon-logo.png);
+  background-image: url(../img/pokemon-logo.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -124,7 +124,7 @@ h1 {
   text-align: left;
   background-color: lightgrey;
   margin: 0;
-  background-image: url(/img/modal-background.jpg);
+  background-image: url(../img/modal-background.jpg);
   background-repeat: no-repeat;
   background-size: contain;
 }
