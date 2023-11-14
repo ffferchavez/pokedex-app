@@ -70,7 +70,9 @@ h1 {
 .dropdown-item:focus,
 .dropdown-item:hover {
   background-color: #e9ecef;
+  color: #000 !important;
 }
+
 #searchbtn:hover,
 .pokemon-button:hover {
   background-color: #4c72ef;
