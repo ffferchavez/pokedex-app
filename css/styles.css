@@ -63,6 +63,7 @@ h1 {
 }
 
 .dropdown-menu {
+  color: #e9ecef;
   background-color: #333;
   border: 1px solid #ced4da;
   border-radius: 4px;

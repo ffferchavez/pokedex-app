@@ -24,6 +24,9 @@ h1 {
 .nav-link {
   font-size: 24px;
 }
+.type-link {
+  color: #ced4da;
+}
 h1 {
   background-image: url(../img/pokemon-logo.png);
   background-position: center;
@@ -62,6 +65,7 @@ h1 {
   border-radius: 20px;
 }
 .dropdown-menu {
+  color: #ced4da;
   background-color: #333;
   border: 1px solid #ced4da;
   border-radius: 4px;
