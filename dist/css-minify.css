@@ -33,7 +33,7 @@ h1 {
   background-size: cover;
   font-size: 84px;
   background-color: #878686;
-  padding: 10%;
+  padding: 7%;
   font-family: Audiowide, sans-serif;
 }
 .text-center {
@@ -43,7 +43,7 @@ h1 {
   font-size: 130px;
   color: #262626;
   transition: 2s;
-  padding: 13%;
+  padding: 11%;
 }
 @media (max-width: 768px) {
   .text-center,
