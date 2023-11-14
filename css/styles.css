@@ -72,6 +72,7 @@ h1 {
 .dropdown-item:hover,
 .dropdown-item:focus {
   background-color: #e9ecef;
+  color: #000;
 }
 
 .list-group-item {
